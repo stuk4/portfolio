@@ -1,0 +1,92 @@
+*{
+    font-family:'Anonymous Pro', monospace;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// *{
+//     outline: 2px solid rgba(50, 205, 50, 0.422) !important;
+//     &:nth-child(2n){
+//         outline: 2px solid rgba(247, 0, 0, 0.585) !important;
+//     }
+// }
+:root{
+    --navy:#0A192F;
+
+    --slate-light:#CCD6F6;
+    --slate-gray:#8892B0;
+    --purple:#444EFF;
+    --nav-height:70px;
+    --text-shadow:
+        0 0 7px var(--purple),
+        0 0 10px var(--purple),
+        0 0 21px var(--purple);
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    
+}
+body{
+    padding-top: var(--nav-height);
+    background: var(--navy);
+}
+html {
+    cursor: url(/src/assets/images/cursor/cursor-glitch-0.png), auto;
+    -webkit-animation: cursor 400ms infinite;
+    animation: cursor 400ms infinite;
+}
+
+a,button:hover{
+    cursor: url(/src/assets/images/cursor/hand-cursor-0.png), auto;
+    -webkit-animation: hand-cursor 400ms infinite;
+    animation: hand-cursor 400ms infinite;
+}
+
+  
+@-webkit-keyframes cursor {
+0% {cursor: url(/src/assets/images/cursor/cursor-glitch-0.png), auto;}
+20% {cursor: url(/src/assets/images/cursor/cursor-glitch-1.png), auto;}
+40% {cursor: url(/src/assets/images/cursor/cursor-glitch-2.png), auto;}
+60% {cursor: url(/src/assets/images/cursor/cursor-glitch-3.png), auto;}
+80% {cursor: url(/src/assets/images/cursor/cursor-glitch-4.png), auto;}
+100% {cursor: url(/src/assets/images/cursor/cursor-glitch-5.png), auto;}
+
+} 
+
+@keyframes cursor {
+    0% {cursor: url(/src/assets/images/cursor/cursor-glitch-0.png), auto;}
+    20% {cursor: url(/src/assets/images/cursor/cursor-glitch-1.png), auto;}
+    40% {cursor: url(/src/assets/images/cursor/cursor-glitch-2.png), auto;}
+    60% {cursor: url(/src/assets/images/cursor/cursor-glitch-3.png), auto;}
+    80% {cursor: url(/src/assets/images/cursor/cursor-glitch-4.png), auto;}
+    100% {cursor: url(/src/assets/images/cursor/cursor-glitch-5.png), auto;}
+
+}
+@-webkit-keyframes hand-cursor {
+    0% {cursor: url(/src/assets/images/cursor/hand-cursor-0.png), auto;}
+    20% {cursor: url(/src/assets/images/cursor/hand-cursor-1.png), auto;}
+    40% {cursor: url(/src/assets/images/cursor/hand-cursor-2.png), auto;}
+    60% {cursor: url(/src/assets/images/cursor/hand-cursor-3.png), auto;}
+    80% {cursor: url(/src/assets/images/cursor/hand-cursor-4.png), auto;}
+    90% {cursor: url(/src/assets/images/cursor/hand-cursor-5.png), auto;}
+    100% {cursor: url(/src/assets/images/cursor/hand-cursor-6.png), auto;}
+
+} 
+
+@keyframes hand-cursor {
+    0% {cursor: url(/src/assets/images/cursor/hand-cursor-0.png), auto;}
+    20% {cursor: url(/src/assets/images/cursor/hand-cursor-1.png), auto;}
+    40% {cursor: url(/src/assets/images/cursor/hand-cursor-2.png), auto;}
+    60% {cursor: url(/src/assets/images/cursor/hand-cursor-3.png), auto;}
+    80% {cursor: url(/src/assets/images/cursor/hand-cursor-4.png), auto;}
+    90% {cursor: url(/src/assets/images/cursor/hand-cursor-5.png), auto;}
+    100% {cursor: url(/src/assets/images/cursor/hand-cursor-6.png), auto;}
+
+
+}

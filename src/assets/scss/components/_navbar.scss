@@ -1,0 +1,53 @@
+.nav{
+    width: 100%;;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--navy);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.577); 
+    transition: transform  0.2s,box-shadow 0.3s,padding 0.1s;
+
+}
+.nav__link{
+    color:var(--slate-light);
+    text-decoration: none;
+    margin: 0 1rem;
+   font-size:var(--fz-sm);
+    &::before{
+        color:var(--slate-light);
+        content: "<";
+        transition: color .3s ease-in-out;
+    }
+    &::after{
+        color:var(--slate-light);
+        content: " />";
+        transition: color .3s ease-in-out;
+    }
+    &:hover{
+        &::before{
+            color:var(--purple);
+            text-shadow:var(--text-shadow);
+        }
+   
+        &::after{
+            color:var(--purple);
+            text-shadow:var(--text-shadow);
+    
+        }
+    
+    }
+}
+.nav--hidden-shadow{
+    box-shadow: none;
+    padding-top: 7px;
+}
+.nav--hidden{
+    
+    // Transform to negative number
+    transform: translateY(calc(-1 * var(--nav-height)));
+    box-shadow: none;
+}
