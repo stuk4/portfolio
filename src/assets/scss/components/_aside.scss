@@ -1,0 +1,95 @@
+.aside__container{
+    
+   aside{
+        
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding: 50px 10px;
+        width: min(75vw, 400px);
+        height: 100vh;
+        outline: 0px;
+        background-color: var(--light-navy);
+        box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+        z-index:1;
+        transform: translateX(0vw);
+        visibility: visible;
+        transition: var(--transition);
+   }
+    button{
+        z-index: 2;
+        position: absolute;
+        background: none;
+        color: inherit;
+        border: none;
+        top:5px;
+        right: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        
+
+    }
+    .aside__burgerBox{
+        
+        width: 60px;
+        height: 60px;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        // display: inline-block;
+        %line-burger{
+
+        
+            width:35px;
+            height: 3px;
+            background-color:var(--slate-light);
+            border-radius: 3px;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+.aside__burger-line{
+    @extend %line-burger;
+    position: absolute;
+    // display: inline-block;
+ 
+    &::before{
+        display: block;
+        position: absolute;
+        @extend %line-burger;
+        content: "";
+        transform: translateY(10px);
+
+    }
+    &::after{
+        display: block;
+        position: absolute;
+        @extend %line-burger;
+        content: "";
+        transform: translateY(-10px);
+    }
+}
+
+.aside__burger-change {
+    
+    .aside__burger-line{
+        transform: translateY(15px);
+       
+        &::before{
+            transform:translateY(-15px) translateX(8px) rotate(60deg);
+        }
+        &::after{
+            transform: translateY(-15px) translateX(-8px) rotate(-60deg);
+        }
+    }
+}

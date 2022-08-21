@@ -1,21 +1,36 @@
-.nav{
+
+header{
     width: 100%;;
     height: var(--nav-height);
     position: fixed;
+    padding: 0px 13px 0px 13px;
     top: 0;
     left: 0;
-    background: var(--navy);
+    background: rgba(10, 25, 47, .85);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.577); 
     transition: transform  0.2s,box-shadow 0.3s,padding 0.1s;
+}
+.nav{
+
+    nav{
+        display: none;
+        visibility: hidden;
+        @media screen and (min-width:768px) {
+            visibility: visible;
+            display:  block;
+        }
+    }
 
 }
 .nav__link{
     color:var(--slate-light);
     text-decoration: none;
     margin: 0 1rem;
+    padding: 5px;
    font-size:var(--fz-sm);
     &::before{
         color:var(--slate-light);

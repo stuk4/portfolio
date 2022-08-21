@@ -3,6 +3,7 @@ import './assets/scss/styles.scss'
 function App() {
 
   const refNav = useRef<HTMLElement>(null)
+  const refMenuBurger = useRef<HTMLButtonElement>(null)
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () =>{
     
@@ -28,18 +29,51 @@ function App() {
       window.removeEventListener('scroll', controlNavbar);
     }
   }, [lastScrollY])
-  
+  const handleOnClickMenuBurger = () => {
+    refMenuBurger.current?.classList.toggle('aside__burger-change')
+  }
   return (
     <div className="layout">
-      <header className='nav' ref={refNav}>
+      <header  ref={refNav}>
+        <div className="nav">
 
-        <nav>
-          <a href="#" className="nav__link" >{'Home'}</a>
-          <a href="#" className="nav__link" >{'AboutMe'}</a>
-          <a href="#" className="nav__link" >{'Experience'}</a>
-          <a href="#" className="nav__link" >{'Contact'}</a>
+          <nav>
+            <a href="#" className="nav__link" >{'Home'}</a>
+            <a href="#" className="nav__link" >{'AboutMe'}</a>
+            <a href="#" className="nav__link" >{'Experience'}</a>
+            <a href="#" className="nav__link" >{'Contact'}</a>
 
-        </nav>
+          </nav>
+        </div>
+        <div className="aside__container">
+              <button ref={refMenuBurger} onClick={handleOnClickMenuBurger} type='button'>
+                <div className="aside__burgerBox">
+                  <div className="aside__burger-line">
+                  </div>
+                </div>
+              </button>
+            <aside className="">
+              <nav>
+                <ol>
+                    <li>
+                      <a href="#" className='nav__link'>Home</a>
+                    </li>
+                    <li>
+                      <a href="#" className='nav__link'>AboutMe</a>
+                    </li>
+                    <li>
+                      <a href="#" className='nav__link'>Experience</a>
+                    </li>
+                    <li>
+                      <a href="#" className='nav__link'>Contact</a>
+                    </li>
+                    
+
+                </ol>
+             
+              </nav>
+            </aside>
+        </div>
       </header>
       <div>
          <p>TEST estes testeste </p>
