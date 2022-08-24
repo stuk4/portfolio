@@ -1,0 +1,16 @@
+.home{
+
+}
+.home__glitch{
+    color:var(--slate-light);
+    font-size: clamp(40px, 8vw, 70px);
+    letter-spacing: 2px;
+    overflow: hidden;
+    z-index: -1;
+    // glow effect
+    // filter: drop-shadow(0 1px 3px);
+   
+   
+}
+
+

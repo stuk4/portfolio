@@ -1,7 +1,11 @@
 .aside__container{
-    
+  
+    @media screen and (min-width:768px) {
+        visibility: hidden;
+        display: none;
+    }
    aside{
-        
+       
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
@@ -17,30 +21,35 @@
         outline: 0px;
         background-color: var(--light-navy);
         box-shadow: -10px 0px 30px -15px var(--navy-shadow);
-        z-index:1;
+        z-index: 10;
         transform: translateX(0vw);
         visibility: visible;
-        transition: var(--transition);
+        transition: all .5s cubic-bezier(.16,.47,1,-0.23);
+       
+        
    }
     button{
-        z-index: 2;
+        z-index: 11;
         position: absolute;
         background: none;
         color: inherit;
         border: none;
         top:5px;
-        right: 0;
+        right: 5px;
         font: inherit;
         cursor: pointer;
         outline: inherit;
-        
+        &:focus-visible{
+            outline: -webkit-focus-ring-color auto 1px;
+            outline: 1px solid var(--slate-light);
+        }
 
     }
+   
     .aside__burgerBox{
         
         width: 60px;
         height: 60px;
-
         position: relative;
         display: flex;
         justify-content: center;
@@ -93,3 +102,38 @@
         }
     }
 }
+.aside__nav{
+    ol{
+        list-style: none;
+        list-style-type: none;
+    }
+    li{
+        margin:50px 0px 50px 0px;
+        a{
+
+            font-size: var(--fz-xl);
+        }
+    }
+
+}
+.aside__blur{
+    overflow: hidden;
+    
+    
+}
+body.aside__blur #content > *{
+    // filter: blur(5px) brightness(0.7);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+
+.aside__hide {
+    aside{
+        overflow-y: hidden;
+        visibility: hidden;
+        transform: translateX(100vw);
+    }
+}
+
