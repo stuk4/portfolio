@@ -6,6 +6,7 @@
     }
    aside{
        
+        
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
@@ -24,7 +25,8 @@
         z-index: 10;
         transform: translateX(0vw);
         visibility: visible;
-        transition: all .5s cubic-bezier(.16,.47,1,-0.23);
+        transition: all .1s cubic-bezier(.16,.47,1,-0.23);
+        // transition: all .1s ease-in-out;
        
         
    }

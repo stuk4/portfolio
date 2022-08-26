@@ -15,14 +15,25 @@ export const NavBar = ({refGlitchHome}:Props) => {
     
     if (typeof window !== 'undefined') { 
       refNav.current?.classList.remove('nav--hidden-shadow');
-      if(window.scrollY ===0)refNav.current?.classList.add('nav--hidden-shadow');
-      
+      if(window.scrollY ===0){
+        refNav.current?.classList.remove('nav--shadow')
+        refNav.current?.classList.add('nav--hidden-shadow');
+        refGlitchHome.current?.classList.add('glitch-effects__layers')
+        refGlitchHome.current?.classList.add('glitch-effects') 
+      }
       if(lastScrollY < window.scrollY){
-     
+        refGlitchHome.current?.classList.add('glitch-effects__layers')
+        refGlitchHome.current?.classList.add('glitch-effects') 
+        
         refNav.current?.classList.add('nav--hidden')
-
+        refNav.current?.classList.add('nav--shadow')
       }else{
-        console.log("We are going up ");
+        if(window.scrollY !== 0){
+          refGlitchHome.current?.classList.remove('glitch-effects__layers')
+          refGlitchHome.current?.classList.remove('glitch-effects') 
+            
+        }
+        
         refNav.current?.classList.remove('nav--hidden')
       }
       setLastScrollY(window.scrollY)
@@ -36,21 +47,11 @@ export const NavBar = ({refGlitchHome}:Props) => {
     }
   }, [lastScrollY])
   const handleOnClickMenuBurger = () => {
+      
     refMenuBurger.current?.classList.toggle('aside__burger-change')
     refAside.current?.classList.toggle('aside__hide')
     document.body.classList.toggle('aside__blur')
   
-      if(!refGlitchHome.current?.classList.contains('glitch-effects')){
-  
-        setTimeout(() => {
-          refGlitchHome.current?.classList.toggle('glitch-effects')
-          refGlitchHome.current?.classList.toggle('glitch-effects__layers')
-        }, 1000);
-      }else{
-       
-        refGlitchHome.current?.classList.toggle('glitch-effects')
-        refGlitchHome.current?.classList.toggle('glitch-effects__layers')
-      }
     
   }
   return (

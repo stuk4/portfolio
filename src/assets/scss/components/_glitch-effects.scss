@@ -1,7 +1,11 @@
 // https://codepen.io/mattgrosswork/pen/VwprebG
 .glitch-effects__layers {
-    position: relative;
+    position: relative; 
 
+  }
+  .glitch-effects{
+  
+    filter: drop-shadow(0 1px 3px);
   }
   // Create multiples glitch-effects__layers for the text
   .glitch-effects__layers::before,

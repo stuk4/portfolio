@@ -11,7 +11,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.577); 
+    // box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.577); 
     transition: transform  0.2s,box-shadow 0.3s,padding 0.1s;
 }
 .nav{
@@ -65,4 +65,7 @@ header{
     // Transform to negative number
     transform: translateY(calc(-1 * var(--nav-height)));
     box-shadow: none;
+}
+.nav--shadow{
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.577); 
 }
