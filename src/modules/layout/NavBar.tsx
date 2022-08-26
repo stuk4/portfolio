@@ -1,10 +1,7 @@
 import { RefObject, useEffect, useRef, useState } from "react";
 
-interface Props{
-    refGlitchHome:RefObject<HTMLHeadingElement>
-} 
 
-export const NavBar = ({refGlitchHome}:Props) => {
+export const NavBar = () => {
       
   const refNav = useRef<HTMLElement>(null)
   const refAside = useRef<HTMLDivElement>(null)
@@ -18,21 +15,13 @@ export const NavBar = ({refGlitchHome}:Props) => {
       if(window.scrollY ===0){
         refNav.current?.classList.remove('nav--shadow')
         refNav.current?.classList.add('nav--hidden-shadow');
-        refGlitchHome.current?.classList.add('glitch-effects__layers')
-        refGlitchHome.current?.classList.add('glitch-effects') 
+
       }
       if(lastScrollY < window.scrollY){
-        refGlitchHome.current?.classList.add('glitch-effects__layers')
-        refGlitchHome.current?.classList.add('glitch-effects') 
         
         refNav.current?.classList.add('nav--hidden')
         refNav.current?.classList.add('nav--shadow')
       }else{
-        if(window.scrollY !== 0){
-          refGlitchHome.current?.classList.remove('glitch-effects__layers')
-          refGlitchHome.current?.classList.remove('glitch-effects') 
-            
-        }
         
         refNav.current?.classList.remove('nav--hidden')
       }
@@ -47,7 +36,6 @@ export const NavBar = ({refGlitchHome}:Props) => {
     }
   }, [lastScrollY])
   const handleOnClickMenuBurger = () => {
-      
     refMenuBurger.current?.classList.toggle('aside__burger-change')
     refAside.current?.classList.toggle('aside__hide')
     document.body.classList.toggle('aside__blur')

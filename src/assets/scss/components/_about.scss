@@ -1,6 +1,19 @@
 #about{
-    
+    min-height: 200vh;
     h2{
+        color:var(--slate-light);
         font-size: clamp(26px,5vw,var(--fz-heading));
+        position: relative;
+        
+        &::after{
+            position: absolute;
+            display: block;
+            content: "";
+            width: 80%;
+            height: 1px;
+            background-color: var(--lightest-navy);
+            bottom: -15px;
+            right:0px
+        }
     }
 }
