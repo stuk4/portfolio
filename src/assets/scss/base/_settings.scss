@@ -45,7 +45,7 @@ html {
     animation: cursor 400ms infinite;
 }
 
-a,button:hover{
+a,button:hover,.cursor-pointer{
     cursor: url(/src/assets/images/cursor/hand-cursor-0.png), auto;
     -webkit-animation: hand-cursor 400ms infinite;
     animation: hand-cursor 400ms infinite;

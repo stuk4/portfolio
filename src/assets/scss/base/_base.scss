@@ -1,5 +1,5 @@
 
-
+// https://unicode-table.com/es/search/?q=cuadrado
 .layout{
     background-color: var(--navy);
     min-height: 100vh;
@@ -13,5 +13,13 @@ main{
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
+    section{
+        min-height:100vh;
+        padding-bottom: 5vh;
+    }
    
+}
+
+.heading{
+    
 }
