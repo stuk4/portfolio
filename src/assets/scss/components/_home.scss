@@ -7,8 +7,10 @@
         font-size: clamp(30px, 8vw, 70px);
         letter-spacing: 2px;
         // overflow: hidden;
+        // FIXME: separar front-end en nuevo tag
+        // para evitar el break word
+        word-wrap: break-word;
         @media screen and (max-width:375px) {
-            word-wrap: break-word;
         }
         
     

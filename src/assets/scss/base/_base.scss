@@ -17,9 +17,13 @@ main{
         min-height:100vh;
         padding-bottom: 5vh;
     }
-   
+    @include devices(tablet){
+        padding: 150px 25px;
+        
+    }
+    @include devices(desktop){
+        padding: 150px 150px;
+        ;
+    }
 }
 
-.heading{
-    
-}

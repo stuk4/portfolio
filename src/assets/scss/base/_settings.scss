@@ -93,6 +93,22 @@ a,button:hover,.cursor-pointer{
 
 
 }
+// MOBILE FIRST
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+    // Tablet or superior
+    @if $breakpoint == tablet {    
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1000px) {
+      @content;
+    }
+  }
+
+}
 // https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites
 // @media (prefers-reduced-motion: reduce) {
 //     *, ::before, ::after {
