@@ -1,6 +1,5 @@
 import { TitleSection } from "../common/components/TitleSection"
-
-import picture from '../../assets/images/profile.png'
+import { AboutPicture } from "./components/AboutPicture"
 import { AboutSkills } from "./components/AboutSkills"
 export const About = () => {
   return (
@@ -13,16 +12,7 @@ export const About = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, illum ullam! Soluta cumque deleniti tempora nesciunt nulla totam repudiandae eaque.</p>
         <AboutSkills />
       </div>
-      {/* TODO: TRANSFORM ON A COMPONENT */}
-      
-       <div className="about__picture">
-          <picture>
-            <img src={picture} className="glitch-effects__paths" alt="Image Bastian" />
-            <span className='about__square'></span>
-            <span className='about__triangle'>&#9650;</span>
-          </picture>
-      </div>
-      
+      <AboutPicture />
     </div>
   </section>
   )

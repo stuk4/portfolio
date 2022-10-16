@@ -1,0 +1,24 @@
+.experience__container{
+    width: 100%;
+    .experience__tabs {
+        display: flex;
+        button{
+            flex-grow: 1;
+            background: none;
+            color: var(--slate-gray);
+            border: none;
+            border-bottom: 1px solid var(--lightest-navy);
+            padding: 25px;
+            background: red;
+            cursor: pointer;
+            outline: inherit;
+            &:disabled{
+                background: blueviolet;
+            }
+        }
+        
+    }
+    .experience__tab-content{
+        color:var(--slate-light);
+    }
+}
