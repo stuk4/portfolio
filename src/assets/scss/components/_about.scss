@@ -1,11 +1,10 @@
 #about{
-    
-   
+  
     .about__content{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+       
         @include devices(tablet){
             flex-direction: row;
             flex-wrap: wrap;

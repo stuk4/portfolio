@@ -95,6 +95,11 @@ a,button:hover,.cursor-pointer{
 }
 // MOBILE FIRST
 @mixin devices ($breakpoint) { //the name of the mixin is devices
+    @if $breakpoint == phone {
+        @media only screen and (min-width: 576px) {
+            @content;
+        }
+    }
     // Tablet or superior
     @if $breakpoint == tablet {    
     @media only screen and (min-width: 768px) {

@@ -1,14 +1,28 @@
+#experience{
+    padding-top: 10vh;
+    @include devices(tablet){
+        padding-top: 0vh;
+   
+        
+    }
+}
 .experience__container{
     width: 100%;
+    
+
     .experience__tabs {
         display: flex;
+        overflow-x: auto;
+       
         button{
-            flex-grow: 1;
-            background: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 130px;
             color: var(--slate-gray);
             border: none;
             border-bottom: 1px solid var(--lightest-navy);
-            padding: 25px;
+            padding: 15px 25px;
             background: red;
             cursor: pointer;
             outline: inherit;
@@ -20,5 +34,6 @@
     }
     .experience__tab-content{
         color:var(--slate-light);
+        padding-top: 45px;
     }
 }

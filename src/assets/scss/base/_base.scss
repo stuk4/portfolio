@@ -15,7 +15,13 @@ main{
     min-height: 100vh;
     section{
         min-height:100vh;
-        padding-bottom: 5vh;
+        padding-bottom: 8vh;
+        @include devices(phone){
+            padding-bottom: 2vh;
+           
+            
+        }
+       
     }
     @include devices(tablet){
         padding: 150px 25px;
