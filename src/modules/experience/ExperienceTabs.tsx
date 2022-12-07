@@ -41,7 +41,7 @@ export const ExperienceTabs = () => {
                 <div className="experience__tabs">
                     {
                         tabs.map((tab,i) =>
-                        <button key={i} id={`${tab.id}`} disabled={currentTab=== `${tab.id}`} type='button' onClick={(handleTabClick)}>
+                        <button key={i} id={`${tab.id}`} disabled={currentTab=== `${tab.id}`} className={` ${currentTab=== `${tab.id}`&& 'test' }`} type='button' onClick={(handleTabClick)}>
                             {tab.tabTitle}
                         </button>
                         )

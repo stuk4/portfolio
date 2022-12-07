@@ -13,6 +13,10 @@
     .experience__tabs {
         display: flex;
         overflow-x: auto;
+        padding-bottom: 10px;;
+        transform: rotateX(180deg);
+        padding-left: 3px;
+        padding-right: 3px;
        
         button{
             display: flex;
@@ -21,19 +25,81 @@
             min-width: 130px;
             color: var(--slate-gray);
             border: none;
-            border-bottom: 1px solid var(--lightest-navy);
+            // margin: 0 .1px;
+            
+            border-bottom: 2px solid var(--lightest-navy);
             padding: 15px 25px;
-            background: red;
+            background: var(--navy);
             cursor: pointer;
             outline: inherit;
+            transform: rotateX(180deg);
+            z-index: 1;
             &:disabled{
-                background: blueviolet;
+                position: relative;
+                border:2px solid var(--lightest-navy);
+                border-bottom: transparent;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                box-shadow: 0 0 5px var(--purple),
+                0 0 2px var(--purple),
+                0 0 2px var(--purple);
+                z-index: 2;
+                animation: fickign 6s step-end infinite;
             }
+        
         }
         
     }
     .experience__tab-content{
         color:var(--slate-light);
         padding-top: 45px;
+    }
+}
+
+@keyframes fickign {
+ 
+    0%{
+        box-shadow: 0 0 5px var(--purple),
+                0 0 2px var(--purple),
+                0 0 2px var(--purple);
+    }
+  
+    5%{
+        box-shadow: 0 0 0px var(--purple),
+        0 0 0px var(--purple),
+        0 0 0px var(--purple);
+
+    }
+    35%{
+        box-shadow: 0 0 5px var(--purple),
+        0 0 2px var(--purple),
+        0 0 2px var(--purple);
+
+
+    }
+    45%{
+        box-shadow: 0 0 5px var(--purple),
+        0 0 2px var(--purple),
+        0 0 2px var(--purple);
+    }
+    76%{
+        box-shadow: 0 0 0px var(--purple),
+        0 0 0px var(--purple),
+        0 0 0px var(--purple);
+    }
+    90%{
+        box-shadow: 0 0 5px var(--purple),
+        0 0 2px var(--purple),
+        0 0 2px var(--purple);
+    }
+    1%,
+    7%,
+    33%,
+    47%,
+    78%,
+    93%{
+        box-shadow: 0 0 0px var(--purple),
+        0 0 0px var(--purple),
+        0 0 0px var(--purple);
     }
 }
