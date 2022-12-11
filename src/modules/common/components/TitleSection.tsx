@@ -8,6 +8,6 @@
 export const TitleSection = ({title}:{title:string}) => {
 
   return (
-    <h2 className="common__title">{'<'+title+'/>'}</h2>
+    <h2 className="common__title">{'<'+title+' />'}</h2>
   )
 }
