@@ -1,0 +1,96 @@
+
+:root{
+
+    // --navy: rgb(23, 23, 23);
+}
+
+.projects__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
+    gap:16px;
+    &:hover {
+        >.projects__card {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    .projects__card{
+        background-color: rgba(255, 255, 255, 0.12);
+        // border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        height: 340px;
+        position: relative;
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+        &::before {
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            transition: opacity 500ms;
+            width: 100%;
+            background: radial-gradient( 800px circle at var(--mouse-x) var(--mouse-y), rgba(130, 135, 241, 0.06), transparent 40% );
+            z-index: 3;
+        }
+        &::after {
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            transition: opacity 500ms;
+            width: 100%;
+            background: radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(130, 135, 241, 0.4), transparent 40% );
+            z-index: 1;
+        }
+        >.projects__card-content {
+            background-color: var(--navy);
+            border-radius: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            inset: 1px;
+            padding: 22px;
+            position: absolute;
+            z-index: 2;
+            
+            header{
+                .projects__head{
+                    position: relative;
+                    .my-svg{
+                        fill:var(--slate-light);
+                    }
+                }
+                .projects__card-body{
+
+                }
+            }
+            footer{
+                li{
+                    list-style: none;
+                    display: inline;
+                    font-size: var(--fz-xxs);
+                    margin-right: 10px;
+                    color:var(--slate-gray)
+                }
+            }
+            
+        }
+
+
+
+
+    }
+
+   
+}

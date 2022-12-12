@@ -1,49 +1,45 @@
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 
 
 export const NavBar = () => {
-      
+    
   const refNav = useRef<HTMLElement>(null)
   const refAside = useRef<HTMLDivElement>(null)
   const refMenuBurger = useRef<HTMLButtonElement>(null)
 
   const [lastScrollY, setLastScrollY] = useState(0);
-  const controlNavbar = () =>{
-    
+  const controlNavbar = useCallback(() => {
     if (typeof window !== 'undefined') { 
       refNav.current?.classList.remove('nav--hidden-shadow');
       if(window.scrollY ===0){
         refNav.current?.classList.remove('nav--shadow')
         refNav.current?.classList.add('nav--hidden-shadow');
-
       }
       if(lastScrollY < window.scrollY){
-        
         refNav.current?.classList.add('nav--hidden')
         refNav.current?.classList.add('nav--shadow')
       }else{
-        
         refNav.current?.classList.remove('nav--hidden')
       }
       setLastScrollY(window.scrollY)
     }
-  }
-  useEffect(() => {
+  }, [lastScrollY])
+
+  useLayoutEffect(() => {
     window.addEventListener('scroll', controlNavbar)
   
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     }
   }, [lastScrollY])
+
   const handleOnClickMenuBurger = () => {
     refMenuBurger.current?.classList.toggle('aside__burger-change')
     refAside.current?.classList.toggle('aside__hide')
     document.body.classList.toggle('aside__blur')
-  
-    
   }
   return (
-    <header  ref={refNav}>
+    <header className="header" ref={refNav}>
     <div className="nav">
 
       <nav>

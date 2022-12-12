@@ -6,40 +6,62 @@ import javascriptLogo from '../../../assets/icons/javascript.svg'
 import htmlLogo from '../../../assets/icons/html.svg'
 import cssLogo from '../../../assets/icons/css.svg'
 import sassLogo from '../../../assets/icons/sass.svg';
+interface SkillImage {
+  src: string
+  alt: string
+  title: string
+}
+
+const skillImages:SkillImage[] = [
+  {
+    src: reactLogo,
+    alt: 'React logo',
+    title: 'React'
+  },
+  {
+    src: vueLogo,
+    alt: 'Vue logo',
+    title: 'Vue'
+  },
+  {
+    src: typeScriptLogo,
+    alt: 'TypeScript logo',
+    title: 'TypeScript'
+  },
+  {
+    src: javascriptLogo,
+    alt: 'JavaScript logo',
+    title: 'JavaScript'
+  },
+  {
+    src: htmlLogo,
+    alt: 'HTML logo',
+    title: 'HTML'
+  },
+  {
+    src: cssLogo,
+    alt: 'CSS logo',
+    title: 'CSS'
+  },
+  {
+    src: sassLogo,
+    alt: 'Sass logo',
+    title: 'Sass'
+  },
+]
+
 export const AboutSkills = () => {
   return (
     <div className="about__skills">
     <ul>
-      <li>
-          <img src={reactLogo} alt="React logo" />
-          <span>React</span>
-       
-      </li>
-      <li>
-        <img src={vueLogo} alt="Vue logo" />
-        <span>Vue</span>
-      </li>
-      <li>
-        <img src={typeScriptLogo} alt="TypeScript logo" />
-        <span>TypeScript</span>
-      </li>
-      <li>
-        <img src={javascriptLogo} alt="Javascript logo" />
-        <span>Javascript</span>
-      </li>
-      <li>
-        <img src={htmlLogo} alt="HTML logo" />
-        <span>HTML</span>
-      </li>
-      <li>
-        <img src={cssLogo} alt="CSS logo" />
-        <span>CSS</span>
-      </li>
-      <li>
-        <img src={sassLogo} alt="SASS logo" />
-        <span>SASS</span>
-      </li>
+      {skillImages.map((skillImage, index) => (
+        <li key={index}>
+          <img src={skillImage.src} alt={skillImage.alt} />
+          <span>{skillImage.title}</span>
+        </li>
+      ))}
     </ul>
+ 
 </div>
   )
 }

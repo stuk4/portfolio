@@ -1,9 +1,10 @@
 
 import './assets/scss/styles.scss'
 import { About } from './modules/about/About'
-import { ExperienceTabs } from './modules/experience/ExperienceTabs'
+import { Experience } from './modules/experience/Experience'
 import { Home } from './modules/home/Home'
 import { NavBar } from './modules/layout/NavBar'
+import { Projects } from './modules/projects/Projects'
 
 function App() {
   
@@ -14,7 +15,8 @@ function App() {
           <main>
             <Home />
             <About />
-            <ExperienceTabs />
+            <Experience />
+            <Projects />
           </main>
       </div>
     </div>

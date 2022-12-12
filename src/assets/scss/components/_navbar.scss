@@ -1,5 +1,5 @@
 
-header{
+.header{
     z-index: 100;
     width: 100%;;
     height: var(--nav-height);
@@ -12,7 +12,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    // box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.577); 
+
     transition: transform  0.2s,box-shadow 0.3s,padding 0.1s;
 }
 .nav{
