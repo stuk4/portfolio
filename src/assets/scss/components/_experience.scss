@@ -6,20 +6,39 @@
         
     }
 }
+.experience__container-show{
+    // position: relative;
+    // overflow-x: visible;
+    // overflow-y: hidden;
+    
+    // max-height: 600px; 
+    .experience__show-more{
+        position: absolute;
+        
+        
+    }
+}
 .experience__container{
     width: 100%;
+    position: relative;
+    // display: flex;
+    // overflow-x: scroll;
     .experience__item {
         /* Used to position the milestone */
         position: relative;
-    
+       
         /* Border */
-        border-bottom: 1px solid var(--slate-light);
+        // border-bottom: 1px solid var(--slate-light);
         margin: 0 auto;
         /* Take full width */
         width: 90%;
         padding: 10px;
+        // Mobile
+        // width: 350px;
 
        .experience__item-content{
+            // width: 350px;
+
             margin-bottom: 30px;
             h3{
                 font-size: var(--fz-xxl);
@@ -49,10 +68,16 @@
             /* Misc */
             background: var(--slate-light);
         }
-
+     
          /* Styles for even items */
          &:nth-child(2n) {
-              .experience__item-content{
+            // background: red;
+            // margin-left: 30px;
+            // @include  devices(){
+
+            // }
+            border-bottom: 1px solid var(--slate-light);
+            .experience__item-content{
                 margin-left: 30px;
                
               }
@@ -66,11 +91,37 @@
             
                 animation: fickign 6s step-end infinite;
             }
+
+            &:last-child{
+                border-bottom: none;
+                position: relative;
+                
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0%;
+                    left:-30px;
+                    // transform: translate(-50%, -50%);
+                    width: 60px;
+                    border-radius: 10px;
+                    height:1px;
+                    background: var(--slate-light);
+                    animation: fickign 2s infinite;
+                }
+               
+               
+            }
+           
+
+        
+            
         }
+   
         /* Styles for odd items */
         &:nth-child(2n + 1) {
+      
             border-right: 1px solid var(--slate-light);
-           
+            border-bottom: 1px solid var(--slate-light);
         
             // animation: fickign 6s step-end infinite;
              .experience__item-content{
@@ -88,53 +139,56 @@
             
                 animation: fickign 6s step-end infinite;
             }
-        }
-        &:first-child{
-            border-top: none;
-            position: relative;
-            // background:var(--slate-light)
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0%;
-                right:-30px;
-                // transform: translate(-50%, -50%);
-                width: 60px;
-                border-radius: 10px;
-                height:1px;
-         
-                background: var(--slate-light);
-                box-shadow: 0 0 5px var(--purple),
-                0 0 2px var(--purple),
-                0 0 2px var(--purple);
-                z-index: 2;
-                animation: fickign 6s step-end infinite;
-                
+            &:first-child{
+                border-top: none;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0%;
+                    right:-30px;
+                    // transform: translate(-50%, -50%);
+                    width: 60px;
+                    border-radius: 10px;
+                    height:1px;
+             
+                    background: var(--slate-light);
+                    box-shadow: 0 0 5px var(--purple),
+                    0 0 2px var(--purple),
+                    0 0 2px var(--purple);
+                    z-index: 2;
+                    animation: fickign 6s step-end infinite;
+                    
+                }
+            }
+           
+            &:nth-child(2n +1){
+              
+                &:last-child{
+                    border-bottom: none;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0%;
+                        right:-30px;
+                        // transform: translate(-50%, -50%);
+                        width: 60px;
+                        border-radius: 10px;
+                        height:1px;
+                        background: var(--slate-light);
+                        animation: fickign 2s infinite;
+                    }
+                }
+               
             }
         }
-        &:last-child{
-            border-bottom: none;
-            position: relative;
-            &::before{
-                content: '';
-                position: absolute;
-                bottom: 0%;
-                right:-30px;
-                // transform: translate(-50%, -50%);
-                width: 60px;
-                border-radius: 10px;
-                height:1px;
-                background: var(--slate-light);
-                animation: fickign 2s infinite;
-            }
-        }
+       
+        
     }
     
 
-   
-        
-    
-   
 }
 
 @keyframes fickign {

@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
     gap:16px;
+    
     &:hover {
         >.projects__card {
             &::after {
@@ -19,7 +20,7 @@
         background-color: rgba(255, 255, 255, 0.12);
         // border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 10px;
-        height: 340px;
+        height: 340px;     
         position: relative;
         &:hover {
             &::before {
@@ -52,6 +53,32 @@
             background: radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(130, 135, 241, 0.4), transparent 40% );
             z-index: 1;
         }
+        .projects__links{
+            position: absolute;
+            z-index: 5;
+            right: 30px;
+            top: 30px;
+            svg{
+                width: 25px;
+                height: 25px;
+                &:hover{
+                    
+                   path{
+                        opacity: 1;
+                        stroke: var(--purple);
+                   }
+                }
+                path{
+                    opacity: .5;
+                    stroke-width: 1;
+                    stroke: var(--slate-gray);
+                
+                
+                }
+            }
+            
+           }
+
         >.projects__card-content {
             background-color: var(--navy);
             border-radius: inherit;
@@ -67,26 +94,78 @@
             header{
                 .projects__head{
                     position: relative;
-                    .my-svg{
-                        fill:var(--slate-light);
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    .projects__icon{
+                        width: 50px;
+                        height: 50px;
+            
+                        border-radius: 7px;
+                        path{
+                           stroke: #4950cf;
+                           transition: stroke 1s ease;
+                           stroke-width: 1px;
+                           box-shadow: 0 0 5px var(--purple),
+                           0 0 2px var(--purple),
+                           0 0 2px var(--purple);
+                           
+                       }
+                      
                     }
+                   
                 }
                 .projects__card-body{
-
+                    h3{
+                        margin: 35px 0px 15px 0px;
+                        color:var(--slate-light);
+                        font-size: var(--fz-xl);
+                        transition:text-shadow 1s ease;
+                    }
+                    p{
+                        color:var(--slate-gray);
+                        font-size: var(--fz-md);
+                    }
                 }
             }
             footer{
                 li{
+                    opacity: .6;
                     list-style: none;
                     display: inline;
                     font-size: var(--fz-xxs);
                     margin-right: 10px;
-                    color:var(--slate-gray)
+                    color:var(--slate-gray);
+                    transition:opacity 1s ease;
                 }
             }
             
         }
+        &:hover {
+            >.projects__card-content{
+                
+                h3{
+                    transition:text-shadow 1s ease;
+                    text-shadow: var(--text-shadow);
+                    // text-shadow: 0 0 5px var(--purple);
 
+                }
+                li{
+                    transition:opacity 1s ease;
+                    opacity: 1;
+                }
+               .projects__icon{
+
+                   path{
+                       transition: stroke 1s ease;
+                       stroke:var(--purple) !important;
+                   }
+                   
+               }
+            }
+  
+
+        }
 
 
 
@@ -94,3 +173,4 @@
 
    
 }
+
