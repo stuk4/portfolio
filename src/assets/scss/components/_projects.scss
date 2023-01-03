@@ -3,12 +3,14 @@
 
     // --navy: rgb(23, 23, 23);
 }
-
+#projects{
+    min-height: 10vh; 
+}
 .projects__container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
     gap:16px;
-    
+   
     &:hover {
         >.projects__card {
             &::after {
@@ -103,6 +105,7 @@
             
                         border-radius: 7px;
                         path{
+                           filter: var(--filter);
                            stroke: #4950cf;
                            transition: stroke 1s ease;
                            stroke-width: 1px;

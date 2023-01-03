@@ -1,6 +1,10 @@
 #home{
-    
-    
+    @include devices(tablet){
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
     .home__glitch{
         
         color:var(--slate-light);

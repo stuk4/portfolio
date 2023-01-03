@@ -25,14 +25,18 @@ body, *{
         0 0 7px var(--purple),
         0 0 10px var(--purple),
         0 0 21px var(--purple);
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
-    --fz-heading:32px;
+    --filter: drop-shadow(0 0 15px var(--purple)) drop-shadow(0 0 50px var(--purple)) contrast(2) brightness(2);
+    --filter-smooth: drop-shadow(0 0 15px var(--purple)) drop-shadow(0 0 25px var(--purple)) contrast(2) brightness(2);
+    --filter-low:drop-shadow(0 0 4px var(--purple)) drop-shadow(0 0 15px var(--purple)) contrast(2) brightness(2);
+    --filter-lowest:drop-shadow(0 0 0px var(--purple)) drop-shadow(0 0 0px var(--purple)) contrast(1) brightness(1);
+    --fz-xxs: .75rem;
+    --fz-xs: .8125rem;
+    --fz-sm: .875rem;
+    --fz-md: 1rem;
+    --fz-lg: 1.125rem;
+    --fz-xl: 1.25rem;
+    --fz-xxl: 1.375rem;
+    --fz-heading: 2rem;
     
 }
 body{

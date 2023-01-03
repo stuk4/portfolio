@@ -1,0 +1,31 @@
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    h2{
+        font-size: clamp(26px, 5vw, var(--fz-heading));
+        color:var(--slate-light)
+    }
+    p{
+        text-align: center;
+        font-size: var(--fz-lg);
+        color: var(--slate-gray);
+        @include devices(tablet){
+             max-width: 600px;
+        }
+    }
+    a{
+        // color: rgb(138, 43, 226);
+        // background-color: transparent;
+        // border: 1px solid var(--purple);
+        border-radius: 8px;
+        padding: 1.25rem 1.75rem;
+        font-size: var(--fz-sm);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        margin-top: 50px;
+    }
+}

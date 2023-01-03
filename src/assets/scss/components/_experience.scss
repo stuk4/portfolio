@@ -1,5 +1,6 @@
 #experience{
     padding-top: 10vh;
+
     @include devices(tablet){
         padding-top: 0vh;
    
@@ -7,11 +8,6 @@
     }
 }
 .experience__container-show{
-    // position: relative;
-    // overflow-x: visible;
-    // overflow-y: hidden;
-    
-    // max-height: 600px; 
     .experience__show-more{
         position: absolute;
         
@@ -21,25 +17,45 @@
 .experience__container{
     width: 100%;
     position: relative;
-    // display: flex;
-    // overflow-x: scroll;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1.5rem;
+    @include devices(tablet){
+        display: block;
+        overflow-x:initial;
+
+    }
     .experience__item {
+        scroll-snap-align: start;
         /* Used to position the milestone */
         position: relative;
-       
+        
         /* Border */
         // border-bottom: 1px solid var(--slate-light);
-        margin: 0 auto;
-        /* Take full width */
-        width: 90%;
-        padding: 10px;
-        // Mobile
-        // width: 350px;
-
+        
+        
+        width: calc(100vw - 40px);
+        margin-top: 50px;
+        border-top: 1px solid var(--slate-light);
+        padding-top: 50px;
+        @include devices(tablet){
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: none;
+            margin: 0 auto;
+            width: 90%;
+            padding: 10px;
+        }
        .experience__item-content{
-            // width: 350px;
-
-            margin-bottom: 30px;
+            
+            width: calc(100vw - 50px);
+            padding-left: 5px;
+            @include devices(tablet){
+                padding-left: inherit;
+                width: inherit;
+                margin-bottom: 30px;
+            }
             h3{
                 font-size: var(--fz-xxl);
                 margin-bottom: 10px;
@@ -54,8 +70,11 @@
         .experience__milestone {
             /* Absolute position */
             position: absolute;
-            top: 50%;
-        
+            @include devices(tablet){
+
+                top: 50%;
+            }
+           
             /* Circle it */
             border-radius: 50%;
             word-wrap: break-word;
@@ -76,19 +95,41 @@
             // @include  devices(){
 
             // }
-            border-bottom: 1px solid var(--slate-light);
+          
+            @include devices(tablet){
+
+                border-bottom: 1px solid var(--slate-light);
+            }
             .experience__item-content{
-                margin-left: 30px;
-               
-              }
-            border-left: 1px solid var(--slate-light);
+                @include devices(tablet){
+
+                    margin-left: 30px;
+                }
+                
+            }
+
+            @include devices(tablet){
+
+                border-left: 1px solid var(--slate-light);
+            }
             .experience__milestone {
-                left: 0;
-                transform: translate(-50%, -50%);
+
+                // left: 0;
+                top: -30px;
+                left: 45%;
+                // transform: translate(0%, -50%);
+                @include devices(tablet){
+                    // top: inherit;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-50%, -50%);
+                }
                 box-shadow: 0 0 5px var(--purple),
                 0 0 2px var(--purple),
                 0 0 2px var(--purple);
-            
+
+                filter: var(--filter-lowest);    
+                
                 animation: fickign 6s step-end infinite;
             }
 
@@ -119,47 +160,69 @@
    
         /* Styles for odd items */
         &:nth-child(2n + 1) {
-      
-            border-right: 1px solid var(--slate-light);
-            border-bottom: 1px solid var(--slate-light);
+         
+            @include devices(tablet){
+
+                border-right: 1px solid var(--slate-light);
+                border-bottom: 1px solid var(--slate-light);
+                 .experience__item-content{
+                    margin-right: 20px;
+                    padding-left: 30px;
+                }
+                
+            }
         
-            // animation: fickign 6s step-end infinite;
-             .experience__item-content{
-                margin-right: 20px;
-                padding-left: 30px;
-               
-              }
               
             .experience__milestone {
-                right: 0;
-                transform: translate(50%, -50%);
+
+                left: 45%;
+                top:-30px;
+                @include devices(tablet){
+                    left: inherit;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
                 box-shadow: 0 0 5px var(--purple),
                 0 0 2px var(--purple),
                 0 0 2px var(--purple);
-            
+                // filter: var(--filter-low);
+                filter: var(--filter-lowest);    
                 animation: fickign 6s step-end infinite;
             }
             &:first-child{
-                border-top: none;
+                @include devices(tablet){
+
+                    border-top: none;
+                }
                 position: relative;
 
+                
                 &::before{
                     content: '';
                     position: absolute;
-                    top: 0%;
-                    right:-30px;
-                    // transform: translate(-50%, -50%);
-                    width: 60px;
-                    border-radius: 10px;
-                    height:1px;
-             
+                    height: 60px;
+                    width: 1px;
+                    left: 0;
+                    top: -30px;
+                    @include devices(tablet){
+                        left: inherit;
+                        top: 0%;
+                        right:-30px;
+                        // transform: translate(-50%, -50%);
+                        width: 60px;
+                        border-radius: 10px;
+                        height:1px;
+                 
+                    }
                     background: var(--slate-light);
+                    
                     box-shadow: 0 0 5px var(--purple),
                     0 0 2px var(--purple),
                     0 0 2px var(--purple);
                     z-index: 2;
                     animation: fickign 6s step-end infinite;
-                    
+                    filter: var(--filter-lowest); 
                 }
             }
            
@@ -168,17 +231,28 @@
                 &:last-child{
                     border-bottom: none;
                     position: relative;
+                    
                     &::before{
                         content: '';
                         position: absolute;
-                        bottom: 0%;
-                        right:-30px;
-                        // transform: translate(-50%, -50%);
-                        width: 60px;
-                        border-radius: 10px;
-                        height:1px;
                         background: var(--slate-light);
+                        box-shadow: 0 0 5px var(--purple),
+                        0 0 2px var(--purple),
+                        0 0 2px var(--purple);
                         animation: fickign 2s infinite;
+                        filter: var(--filter-lowest); 
+                        width: 1px;
+                        height: 60px;
+                        top: -30px;
+                        right: 0;
+                        @include devices(tablet){
+                            top: inherit;           
+                            bottom: 0%;        
+                            right:-30px;
+                            width: 60px;
+                            border-radius: 10px;
+                            height:1px;
+                        }
                     }
                 }
                
@@ -197,12 +271,14 @@
         box-shadow: 0 0 5px var(--purple),
                 0 0 2px var(--purple),
                 0 0 2px var(--purple);
+        // filter: drop-shadow(0 0 4px var(--purple)) drop-shadow(0 0 15px var(--purple)) contrast(2) brightness(2);       
     }
   
     5%{
         box-shadow: 0 0 0px var(--purple),
         0 0 0px var(--purple),
         0 0 0px var(--purple);
+        // filter: var(--filter-lowest);      
 
     }
     35%{

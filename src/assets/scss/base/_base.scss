@@ -1,4 +1,6 @@
-
+html{
+    font-size: 16px;
+}
 // https://unicode-table.com/es/search/?q=cuadrado
 .layout{
     background-color: var(--navy);
@@ -15,12 +17,16 @@ main{
     min-height: 100vh;
    
     section{
+        &:not(#contact,#projects){
+            
+            min-height:100vh;
+            padding-bottom: 8vh;
+        }
         margin: 0 auto;
-        min-height:100vh;
-        padding-bottom: 8vh;
         &:not(.tab-section){
             max-width: 950px;
         }
+        
         @include devices(phone){
             padding-bottom: 2vh;
            
@@ -32,12 +38,11 @@ main{
         max-width: 700px;
     }
     @include devices(tablet){
-        padding: 150px 25px;
+        padding: 0px 25px;
         
     }
     @include devices(desktop){
-        padding: 150px 150px;
-        ;
+        padding: 0px 150px;
     }
 }
 

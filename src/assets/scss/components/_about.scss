@@ -73,6 +73,7 @@
                         justify-content: center;
                         align-items: center;
                         &::before{
+                            filter: var(--filter);
                             border-radius: 7px;
                             content: '';
                             position: absolute;
@@ -204,6 +205,7 @@
                     top:-30px;
                     left: -60px;
                     -webkit-text-stroke: 3px var(--purple);
+                    filter: var(--filter-low);
                     color: transparent;
                     font-size: 350px;
                     transition: transform .5s ease-in-out;
