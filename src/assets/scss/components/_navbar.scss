@@ -7,7 +7,8 @@
     padding: 0px 13px 0px 13px;
     top: 0;
     left: 0;
-    background: rgba(10, 25, 47, .85);
+    // background: rgba(10, 25, 47, .85);
+    background: rgba(14, 10, 47, .85);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: flex-end;
@@ -37,6 +38,7 @@
         color:var(--slate-light);
         content: "<";
         transition: color .3s ease-in-out;
+
     }
     &::after{
         color:var(--slate-light);
@@ -47,12 +49,13 @@
         &::before{
             color:var(--purple);
             text-shadow:var(--text-shadow);
+            filter: var(--filter-smooth);
         }
    
         &::after{
             color:var(--purple);
             text-shadow:var(--text-shadow);
-    
+            filter: var(--filter-smooth);
         }
     
     }

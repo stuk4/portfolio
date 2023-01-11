@@ -14,9 +14,9 @@ body, *{
 //     }
 // }
 :root{
-    --navy:#0A192F;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
+    --navy-grape:#0e0a2f;
+     --light-navy-grape: #141039;;
+     --lightest-navy-grape: #2e285c;
     --slate-light:#CCD6F6;
     --slate-gray:#8892b0;
     --purple:#444EFF;
@@ -41,7 +41,7 @@ body, *{
 }
 body{
     padding-top: var(--nav-height);
-    background: var(--navy);
+    background: var(--navy-grape);
 }
 html {
     cursor: url(/src/assets/images/cursor/cursor-glitch-0.png), auto;

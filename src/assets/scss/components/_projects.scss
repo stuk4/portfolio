@@ -1,8 +1,5 @@
 
-:root{
 
-    // --navy: rgb(23, 23, 23);
-}
 #projects{
     min-height: 10vh; 
 }
@@ -82,7 +79,7 @@
            }
 
         >.projects__card-content {
-            background-color: var(--navy);
+            background-color: var(--navy-grape);
             border-radius: inherit;
             display: flex;
             flex-direction: column;
@@ -112,7 +109,7 @@
                            box-shadow: 0 0 5px var(--purple),
                            0 0 2px var(--purple),
                            0 0 2px var(--purple);
-                           
+                        
                        }
                       
                     }

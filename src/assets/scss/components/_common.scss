@@ -12,13 +12,13 @@ section{
             content: "";
             width: 80%;
             height: 2px;
-            // background-color: var(--lightest-navy);
+            // background-color: var( --lightest-navy-grape);
             bottom: -15px;
             left:100px;
-            background-image: -webkit-gradient(linear,left top,right top,from(var(--lightest-navy)),color-stop(var(--lightest-navy)),to(transparent));
-            background-image: -webkit-linear-gradient(left,var(--lightest-navy),var(--lightest-navy),transparent);
-            background-image: -o-linear-gradient(left,var(--lightest-navy),var(--lightest-navy),transparent);
-            background-image: linear-gradient(to right,var(--lightest-navy),var(--lightest-navy),transparent);
+            background-image: -webkit-gradient(linear,left top,right top,from(var( --lightest-navy-grape)),color-stop(var( --lightest-navy-grape)),to(transparent));
+            background-image: -webkit-linear-gradient(left,var( --lightest-navy-grape),var( --lightest-navy-grape),transparent);
+            background-image: -o-linear-gradient(left,var( --lightest-navy-grape),var( --lightest-navy-grape),transparent);
+            background-image: linear-gradient(to right,var( --lightest-navy-grape),var( --lightest-navy-grape),transparent);
             box-sizing: content-box;
             border: 0;
             // animation: flicker 3s linear infinite;
